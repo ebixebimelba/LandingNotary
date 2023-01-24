@@ -1,0 +1,2145 @@
+/*
+! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}.absolute {
+  position: absolute;
+}.relative {
+  position: relative;
+}.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}.inset-x-2 {
+  left: 0.5rem;
+  right: 0.5rem;
+}.left-\[815px\] {
+  left: 815px;
+}.top-\[4754px\] {
+  top: 4754px;
+}.left-\[1120\.34px\] {
+  left: 1120.34px;
+}.top-\[3386\.37px\] {
+  top: 3386.37px;
+}.left-\[887px\] {
+  left: 887px;
+}.top-\[3427\.58px\] {
+  top: 3427.58px;
+}.left-\[643px\] {
+  left: 643px;
+}.top-\[3350px\] {
+  top: 3350px;
+}.left-\[394\.47px\] {
+  left: 394.47px;
+}.top-\[3447px\] {
+  top: 3447px;
+}.left-\[475\.34px\] {
+  left: 475.34px;
+}.top-\[3529\.11px\] {
+  top: 3529.11px;
+}.left-\[470\.01px\] {
+  left: 470.01px;
+}.top-\[3525\.56px\] {
+  top: 3525.56px;
+}.left-\[437\.42px\] {
+  left: 437.42px;
+}.top-\[3511\.39px\] {
+  top: 3511.39px;
+}.top-\[3498\.39px\] {
+  top: 3498.39px;
+}.left-\[457\.77px\] {
+  left: 457.77px;
+}.top-\[3484\.81px\] {
+  top: 3484.81px;
+}.left-\[460\.73px\] {
+  left: 460.73px;
+}.top-\[3476\.54px\] {
+  top: 3476.54px;
+}.left-\[454\.81px\] {
+  left: 454.81px;
+}.top-\[3473\.58px\] {
+  top: 3473.58px;
+}.left-\[427\.13px\] {
+  left: 427.13px;
+}.top-\[3467\.31px\] {
+  top: 3467.31px;
+}.top-\[3480\.08px\] {
+  top: 3480.08px;
+}.left-\[32\.1\%\] {
+  left: 32.1%;
+}.right-\[67\.62\%\] {
+  right: 67.62%;
+}.top-\[3516\.07px\] {
+  top: 3516.07px;
+}.left-\[35\.72\%\] {
+  left: 35.72%;
+}.right-\[63\.73\%\] {
+  right: 63.73%;
+}.top-\[3502\.28px\] {
+  top: 3502.28px;
+}.left-\[28\.33\%\] {
+  left: 28.33%;
+}.right-\[71\.32\%\] {
+  right: 71.32%;
+}.top-\[3510\.13px\] {
+  top: 3510.13px;
+}.left-\[28\.48\%\] {
+  left: 28.48%;
+}.right-\[71\.04\%\] {
+  right: 71.04%;
+}.top-\[3460px\] {
+  top: 3460px;
+}.left-\[29\.14\%\] {
+  left: 29.14%;
+}.right-\[64\.47\%\] {
+  right: 64.47%;
+}.left-\[232\.34px\] {
+  left: 232.34px;
+}.top-\[3438\.11px\] {
+  top: 3438.11px;
+}.left-\[227\.01px\] {
+  left: 227.01px;
+}.top-\[3434\.56px\] {
+  top: 3434.56px;
+}.left-\[194\.42px\] {
+  left: 194.42px;
+}.top-\[3420\.39px\] {
+  top: 3420.39px;
+}.top-\[3407\.39px\] {
+  top: 3407.39px;
+}.left-\[214\.77px\] {
+  left: 214.77px;
+}.top-\[3393\.81px\] {
+  top: 3393.81px;
+}.left-\[217\.73px\] {
+  left: 217.73px;
+}.top-\[3385\.54px\] {
+  top: 3385.54px;
+}.left-\[211\.81px\] {
+  left: 211.81px;
+}.top-\[3382\.58px\] {
+  top: 3382.58px;
+}.left-\[184\.13px\] {
+  left: 184.13px;
+}.top-\[3376\.31px\] {
+  top: 3376.31px;
+}.top-\[3389\.08px\] {
+  top: 3389.08px;
+}.left-\[15\.23\%\] {
+  left: 15.23%;
+}.right-\[84\.49\%\] {
+  right: 84.49%;
+}.top-\[3425\.07px\] {
+  top: 3425.07px;
+}.left-\[18\.84\%\] {
+  left: 18.84%;
+}.right-\[80\.6\%\] {
+  right: 80.6%;
+}.top-\[3411\.28px\] {
+  top: 3411.28px;
+}.left-\[11\.46\%\] {
+  left: 11.46%;
+}.right-\[88\.19\%\] {
+  right: 88.19%;
+}.top-\[3419\.13px\] {
+  top: 3419.13px;
+}.left-\[11\.6\%\] {
+  left: 11.6%;
+}.right-\[87\.91\%\] {
+  right: 87.91%;
+}.top-\[3369px\] {
+  top: 3369px;
+}.left-\[12\.27\%\] {
+  left: 12.27%;
+}.right-\[81\.34\%\] {
+  right: 81.34%;
+}.left-0 {
+  left: 0px;
+}.top-\[3328px\] {
+  top: 3328px;
+}.left-\[55px\] {
+  left: 55px;
+}.top-\[3089px\] {
+  top: 3089px;
+}.left-\[53\.26\%\] {
+  left: 53.26%;
+}.right-\[44\.51\%\] {
+  right: 44.51%;
+}.top-\[47\.56\%\] {
+  top: 47.56%;
+}.bottom-\[51\.81\%\] {
+  bottom: 51.81%;
+}.left-\[11\.53\%\] {
+  left: 11.53%;
+}.right-\[86\.11\%\] {
+  right: 86.11%;
+}.top-\[52\.31\%\] {
+  top: 52.31%;
+}.bottom-\[47\.06\%\] {
+  bottom: 47.06%;
+}.top-\[49\.94\%\] {
+  top: 49.94%;
+}.bottom-\[49\.43\%\] {
+  bottom: 49.43%;
+}.right-\[87\.22\%\] {
+  right: 87.22%;
+}.top-\[50\.37\%\] {
+  top: 50.37%;
+}.bottom-\[49\.5\%\] {
+  bottom: 49.5%;
+}.left-\[11\.75\%\] {
+  left: 11.75%;
+}.right-\[86\.31\%\] {
+  right: 86.31%;
+}.top-\[50\.03\%\] {
+  top: 50.03%;
+}.bottom-\[49\.56\%\] {
+  bottom: 49.56%;
+}.top-\[3971px\] {
+  top: 3971px;
+}.top-\[2283px\] {
+  top: 2283px;
+}.top-\[3838px\] {
+  top: 3838px;
+}.left-\[89\.11\%\] {
+  left: 89.11%;
+}.right-\[9\.91\%\] {
+  right: 9.91%;
+}.top-\[77\.8\%\] {
+  top: 77.8%;
+}.bottom-\[21\.96\%\] {
+  bottom: 21.96%;
+}.left-\[89\.34\%\] {
+  left: 89.34%;
+}.right-\[10\.11\%\] {
+  right: 10.11%;
+}.top-\[77\.85\%\] {
+  top: 77.85%;
+}.bottom-\[22\.02\%\] {
+  bottom: 22.02%;
+}.left-\[66\.62\%\] {
+  left: 66.62%;
+}.right-\[31\.29\%\] {
+  right: 31.29%;
+}.top-\[82\.73\%\] {
+  top: 82.73%;
+}.bottom-\[16\.64\%\] {
+  bottom: 16.64%;
+}.left-\[65\.52\%\] {
+  left: 65.52%;
+}.right-\[33\.16\%\] {
+  right: 33.16%;
+}.top-\[82\.4\%\] {
+  top: 82.4%;
+}.bottom-\[17\.36\%\] {
+  bottom: 17.36%;
+}.left-\[64\.96\%\] {
+  left: 64.96%;
+}.right-\[34\.41\%\] {
+  right: 34.41%;
+}.top-\[82\.44\%\] {
+  top: 82.44%;
+}.bottom-\[17\.41\%\] {
+  bottom: 17.41%;
+}.left-\[64\.62\%\] {
+  left: 64.62%;
+}.right-\[34\.34\%\] {
+  right: 34.34%;
+}.top-\[82\.34\%\] {
+  top: 82.34%;
+}.bottom-\[17\.55\%\] {
+  bottom: 17.55%;
+}.left-\[63\.07\%\] {
+  left: 63.07%;
+}.right-\[35\.88\%\] {
+  right: 35.88%;
+}.top-\[82\.1\%\] {
+  top: 82.1%;
+}.bottom-\[17\.66\%\] {
+  bottom: 17.66%;
+}.left-\[60\.7\%\] {
+  left: 60.7%;
+}.right-\[38\.47\%\] {
+  right: 38.47%;
+}.top-\[81\.86\%\] {
+  top: 81.86%;
+}.bottom-\[17\.95\%\] {
+  bottom: 17.95%;
+}.left-\[59\.89\%\] {
+  left: 59.89%;
+}.right-\[39\.69\%\] {
+  right: 39.69%;
+}.top-\[81\.98\%\] {
+  top: 81.98%;
+}.bottom-\[17\.89\%\] {
+  bottom: 17.89%;
+}.left-\[47\.39\%\] {
+  left: 47.39%;
+}.right-\[51\.78\%\] {
+  right: 51.78%;
+}.top-\[81\.2\%\] {
+  top: 81.2%;
+}.bottom-\[18\.52\%\] {
+  bottom: 18.52%;
+}.left-\[47\.75\%\] {
+  left: 47.75%;
+}.right-\[51\.48\%\] {
+  right: 51.48%;
+}.top-\[82\%\] {
+  top: 82%;
+}.bottom-\[17\.83\%\] {
+  bottom: 17.83%;
+}.left-\[46\.02\%\] {
+  left: 46.02%;
+}.right-\[53\.5\%\] {
+  right: 53.5%;
+}.top-\[81\.7\%\] {
+  top: 81.7%;
+}.bottom-\[18\.14\%\] {
+  bottom: 18.14%;
+}.left-\[46\.24\%\] {
+  left: 46.24%;
+}.right-\[53\.62\%\] {
+  right: 53.62%;
+}.top-\[81\.74\%\] {
+  top: 81.74%;
+}.bottom-\[18\.22\%\] {
+  bottom: 18.22%;
+}.left-\[45\.12\%\] {
+  left: 45.12%;
+}.right-\[54\.05\%\] {
+  right: 54.05%;
+}.top-\[83\.16\%\] {
+  top: 83.16%;
+}.bottom-\[16\.75\%\] {
+  bottom: 16.75%;
+}.left-\[46\.01\%\] {
+  left: 46.01%;
+}.right-\[53\.3\%\] {
+  right: 53.3%;
+}.top-\[83\.12\%\] {
+  top: 83.12%;
+}.left-\[48\.94\%\] {
+  left: 48.94%;
+}.right-\[50\.71\%\] {
+  right: 50.71%;
+}.top-\[83\.11\%\] {
+  top: 83.11%;
+}.bottom-\[16\.81\%\] {
+  bottom: 16.81%;
+}.left-\[49\.15\%\] {
+  left: 49.15%;
+}.right-\[50\.51\%\] {
+  right: 50.51%;
+}.top-\[83\.14\%\] {
+  top: 83.14%;
+}.bottom-\[16\.78\%\] {
+  bottom: 16.78%;
+}.left-\[52\.34\%\] {
+  left: 52.34%;
+}.right-\[47\.04\%\] {
+  right: 47.04%;
+}.top-\[82\.68\%\] {
+  top: 82.68%;
+}.bottom-\[17\.15\%\] {
+  bottom: 17.15%;
+}.left-\[50\.96\%\] {
+  left: 50.96%;
+}.right-\[48\.7\%\] {
+  right: 48.7%;
+}.bottom-\[16\.79\%\] {
+  bottom: 16.79%;
+}.left-\[51\.67\%\] {
+  left: 51.67%;
+}.right-\[47\.22\%\] {
+  right: 47.22%;
+}.top-\[82\.82\%\] {
+  top: 82.82%;
+}.bottom-\[16\.96\%\] {
+  bottom: 16.96%;
+}.left-\[47\.2\%\] {
+  left: 47.2%;
+}.right-\[38\.43\%\] {
+  right: 38.43%;
+}.top-\[80\.28\%\] {
+  top: 80.28%;
+}.bottom-\[16\.48\%\] {
+  bottom: 16.48%;
+}.left-\[79\.97\%\] {
+  left: 79.97%;
+}.right-\[13\.99\%\] {
+  right: 13.99%;
+}.top-\[78\.15\%\] {
+  top: 78.15%;
+}.bottom-\[20\.98\%\] {
+  bottom: 20.98%;
+}.left-\[68\.63\%\] {
+  left: 68.63%;
+}.right-\[24\.01\%\] {
+  right: 24.01%;
+}.top-\[78\.84\%\] {
+  top: 78.84%;
+}.bottom-\[20\.1\%\] {
+  bottom: 20.1%;
+}.left-\[68\.13\%\] {
+  left: 68.13%;
+}.right-\[24\.79\%\] {
+  right: 24.79%;
+}.top-\[77\.1\%\] {
+  top: 77.1%;
+}.bottom-\[21\.93\%\] {
+  bottom: 21.93%;
+}.left-\[52\.63\%\] {
+  left: 52.63%;
+}.right-\[40\.57\%\] {
+  right: 40.57%;
+}.top-\[75\.53\%\] {
+  top: 75.53%;
+}.bottom-\[22\.93\%\] {
+  bottom: 22.93%;
+}.left-\[78\.57\%\] {
+  left: 78.57%;
+}.right-\[16\.71\%\] {
+  right: 16.71%;
+}.top-\[75\.78\%\] {
+  top: 75.78%;
+}.bottom-\[23\.51\%\] {
+  bottom: 23.51%;
+}.left-\[86\.2\%\] {
+  left: 86.2%;
+}.right-\[12\.83\%\] {
+  right: 12.83%;
+}.top-\[78\.73\%\] {
+  top: 78.73%;
+}.bottom-\[21\.19\%\] {
+  bottom: 21.19%;
+}.left-\[84\.52\%\] {
+  left: 84.52%;
+}.right-\[8\.4\%\] {
+  right: 8.4%;
+}.top-\[78\.55\%\] {
+  top: 78.55%;
+}.bottom-\[20\.56\%\] {
+  bottom: 20.56%;
+}.left-\[81\.67\%\] {
+  left: 81.67%;
+}.right-\[14\.99\%\] {
+  right: 14.99%;
+}.top-\[76\.21\%\] {
+  top: 76.21%;
+}.bottom-\[22\.58\%\] {
+  bottom: 22.58%;
+}.left-\[91\.72\%\] {
+  left: 91.72%;
+}.right-\[6\.54\%\] {
+  right: 6.54%;
+}.top-\[76\.79\%\] {
+  top: 76.79%;
+}.bottom-\[22\.81\%\] {
+  bottom: 22.81%;
+}.left-\[92\.21\%\] {
+  left: 92.21%;
+}.right-\[6\.19\%\] {
+  right: 6.19%;
+}.top-\[75\.86\%\] {
+  top: 75.86%;
+}.bottom-\[23\.31\%\] {
+  bottom: 23.31%;
+}.left-\[89\.63\%\] {
+  left: 89.63%;
+}.right-\[10\.16\%\] {
+  right: 10.16%;
+}.top-\[78\.07\%\] {
+  top: 78.07%;
+}.bottom-\[21\.89\%\] {
+  bottom: 21.89%;
+}.left-\[89\.7\%\] {
+  left: 89.7%;
+}.right-\[10\.17\%\] {
+  right: 10.17%;
+}.top-\[77\.99\%\] {
+  top: 77.99%;
+}.bottom-\[21\.95\%\] {
+  bottom: 21.95%;
+}.top-\[77\.95\%\] {
+  top: 77.95%;
+}.left-\[89\.38\%\] {
+  left: 89.38%;
+}.right-\[10\.27\%\] {
+  right: 10.27%;
+}.top-\[77\.9\%\] {
+  top: 77.9%;
+}.bottom-\[22\.03\%\] {
+  bottom: 22.03%;
+}.left-\[89\.6\%\] {
+  left: 89.6%;
+}.right-\[10\.26\%\] {
+  right: 10.26%;
+}.bottom-\[21\.9\%\] {
+  bottom: 21.9%;
+}.right-\[10\.52\%\] {
+  right: 10.52%;
+}.top-\[77\.89\%\] {
+  top: 77.89%;
+}.bottom-\[22\.08\%\] {
+  bottom: 22.08%;
+}.left-\[89\.33\%\] {
+  left: 89.33%;
+}.right-\[10\.53\%\] {
+  right: 10.53%;
+}.left-\[89\.31\%\] {
+  left: 89.31%;
+}.right-\[10\.55\%\] {
+  right: 10.55%;
+}.top-\[77\.88\%\] {
+  top: 77.88%;
+}.bottom-\[22\.1\%\] {
+  bottom: 22.1%;
+}.left-\[89\.28\%\] {
+  left: 89.28%;
+}.right-\[10\.58\%\] {
+  right: 10.58%;
+}.bottom-\[22\.11\%\] {
+  bottom: 22.11%;
+}.left-\[89\.26\%\] {
+  left: 89.26%;
+}.right-\[10\.6\%\] {
+  right: 10.6%;
+}.top-\[77\.84\%\] {
+  top: 77.84%;
+}.bottom-\[22\.12\%\] {
+  bottom: 22.12%;
+}.left-\[89\.17\%\] {
+  left: 89.17%;
+}.right-\[10\.69\%\] {
+  right: 10.69%;
+}.left-\[89\.12\%\] {
+  left: 89.12%;
+}.right-\[10\.74\%\] {
+  right: 10.74%;
+}.left-\[89\.03\%\] {
+  left: 89.03%;
+}.right-\[10\.9\%\] {
+  right: 10.9%;
+}.top-\[77\.81\%\] {
+  top: 77.81%;
+}.bottom-\[22\.15\%\] {
+  bottom: 22.15%;
+}.left-\[88\.6\%\] {
+  left: 88.6%;
+}.right-\[11\.26\%\] {
+  right: 11.26%;
+}.bottom-\[22\.17\%\] {
+  bottom: 22.17%;
+}.left-\[87\.64\%\] {
+  left: 87.64%;
+}.right-\[8\.34\%\] {
+  right: 8.34%;
+}.top-\[77\.64\%\] {
+  top: 77.64%;
+}.bottom-\[21\.62\%\] {
+  bottom: 21.62%;
+}.left-\[58\.08\%\] {
+  left: 58.08%;
+}.right-\[36\.23\%\] {
+  right: 36.23%;
+}.bottom-\[19\.67\%\] {
+  bottom: 19.67%;
+}.left-\[80\.98\%\] {
+  left: 80.98%;
+}.right-\[18\.81\%\] {
+  right: 18.81%;
+}.top-\[80\.71\%\] {
+  top: 80.71%;
+}.bottom-\[19\.26\%\] {
+  bottom: 19.26%;
+}.left-\[78\.48\%\] {
+  left: 78.48%;
+}.right-\[18\.6\%\] {
+  right: 18.6%;
+}.top-\[79\.39\%\] {
+  top: 79.39%;
+}.bottom-\[19\.14\%\] {
+  bottom: 19.14%;
+}.left-\[63\.62\%\] {
+  left: 63.62%;
+}.right-\[30\.2\%\] {
+  right: 30.2%;
+}.top-\[77\.57\%\] {
+  top: 77.57%;
+}.bottom-\[21\.11\%\] {
+  bottom: 21.11%;
+}.left-\[54\.05\%\] {
+  left: 54.05%;
+}.right-\[40\.26\%\] {
+  right: 40.26%;
+}.top-\[74\.82\%\] {
+  top: 74.82%;
+}.bottom-\[24\.07\%\] {
+  bottom: 24.07%;
+}.left-\[68\.5\%\] {
+  left: 68.5%;
+}.right-\[25\.81\%\] {
+  right: 25.81%;
+}.top-\[75\.39\%\] {
+  top: 75.39%;
+}.bottom-\[23\.62\%\] {
+  bottom: 23.62%;
+}.left-\[81\.17\%\] {
+  left: 81.17%;
+}.right-\[15\.5\%\] {
+  right: 15.5%;
+}.top-\[79\.34\%\] {
+  top: 79.34%;
+}.bottom-\[19\.25\%\] {
+  bottom: 19.25%;
+}.left-\[86\.96\%\] {
+  left: 86.96%;
+}.right-\[6\.65\%\] {
+  right: 6.65%;
+}.top-\[76\.04\%\] {
+  top: 76.04%;
+}.bottom-\[22\.63\%\] {
+  bottom: 22.63%;
+}.left-\[93\.08\%\] {
+  left: 93.08%;
+}.right-\[6\.09\%\] {
+  right: 6.09%;
+}.top-\[76\.77\%\] {
+  top: 76.77%;
+}.bottom-\[22\.95\%\] {
+  bottom: 22.95%;
+}.left-\[90\.36\%\] {
+  left: 90.36%;
+}.right-\[8\.53\%\] {
+  right: 8.53%;
+}.top-\[77\.59\%\] {
+  top: 77.59%;
+}.bottom-\[22\.04\%\] {
+  bottom: 22.04%;
+}.left-\[74\.75\%\] {
+  left: 74.75%;
+}.right-\[19\.69\%\] {
+  right: 19.69%;
+}.top-\[77\.83\%\] {
+  top: 77.83%;
+}.bottom-\[20\.83\%\] {
+  bottom: 20.83%;
+}.left-\[83\.22\%\] {
+  left: 83.22%;
+}.right-\[13\.17\%\] {
+  right: 13.17%;
+}.top-\[77\.14\%\] {
+  top: 77.14%;
+}.bottom-\[21\.69\%\] {
+  bottom: 21.69%;
+}.left-\[68\.28\%\] {
+  left: 68.28%;
+}.right-\[25\.61\%\] {
+  right: 25.61%;
+}.top-\[76\.26\%\] {
+  top: 76.26%;
+}.bottom-\[22\.68\%\] {
+  bottom: 22.68%;
+}.left-\[52\.13\%\] {
+  left: 52.13%;
+}.right-\[40\.92\%\] {
+  right: 40.92%;
+}.top-\[76\.66\%\] {
+  top: 76.66%;
+}.bottom-\[20\.26\%\] {
+  bottom: 20.26%;
+}.left-\[76\.8\%\] {
+  left: 76.8%;
+}.right-\[18\.68\%\] {
+  right: 18.68%;
+}.top-\[76\%\] {
+  top: 76%;
+}.left-\[81\.94\%\] {
+  left: 81.94%;
+}.right-\[10\.14\%\] {
+  right: 10.14%;
+}.top-\[80\.36\%\] {
+  top: 80.36%;
+}.bottom-\[18\.03\%\] {
+  bottom: 18.03%;
+}.left-\[88\.49\%\] {
+  left: 88.49%;
+}.right-\[11\.37\%\] {
+  right: 11.37%;
+}.top-\[77\.93\%\] {
+  top: 77.93%;
+}.left-\[88\.28\%\] {
+  left: 88.28%;
+}.right-\[11\.58\%\] {
+  right: 11.58%;
+}.top-\[78\.02\%\] {
+  top: 78.02%;
+}.left-\[88\.02\%\] {
+  left: 88.02%;
+}.right-\[11\.84\%\] {
+  right: 11.84%;
+}.top-\[78\.14\%\] {
+  top: 78.14%;
+}.bottom-\[21\.82\%\] {
+  bottom: 21.82%;
+}.left-\[87\.91\%\] {
+  left: 87.91%;
+}.right-\[11\.88\%\] {
+  right: 11.88%;
+}.bottom-\[21\.81\%\] {
+  bottom: 21.81%;
+}.left-\[87\.83\%\] {
+  left: 87.83%;
+}.right-\[12\.03\%\] {
+  right: 12.03%;
+}.left-\[87\.51\%\] {
+  left: 87.51%;
+}.right-\[12\.42\%\] {
+  right: 12.42%;
+}.top-\[78\.3\%\] {
+  top: 78.3%;
+}.bottom-\[21\.66\%\] {
+  bottom: 21.66%;
+}.left-\[87\.49\%\] {
+  left: 87.49%;
+}.right-\[12\.38\%\] {
+  right: 12.38%;
+}.left-\[87\.18\%\] {
+  left: 87.18%;
+}.right-\[12\.68\%\] {
+  right: 12.68%;
+}.top-\[78\.47\%\] {
+  top: 78.47%;
+}.bottom-\[21\.49\%\] {
+  bottom: 21.49%;
+}.left-\[87\.08\%\] {
+  left: 87.08%;
+}.right-\[12\.85\%\] {
+  right: 12.85%;
+}.top-\[78\.5\%\] {
+  top: 78.5%;
+}.bottom-\[21\.47\%\] {
+  bottom: 21.47%;
+}.left-\[87\.05\%\] {
+  left: 87.05%;
+}.right-\[12\.81\%\] {
+  right: 12.81%;
+}.bottom-\[21\.46\%\] {
+  bottom: 21.46%;
+}.left-\[87\.03\%\] {
+  left: 87.03%;
+}.top-\[78\.51\%\] {
+  top: 78.51%;
+}.bottom-\[21\.45\%\] {
+  bottom: 21.45%;
+}.left-\[87\.01\%\] {
+  left: 87.01%;
+}.right-\[12\.92\%\] {
+  right: 12.92%;
+}.bottom-\[21\.43\%\] {
+  bottom: 21.43%;
+}.left-\[86\.91\%\] {
+  left: 86.91%;
+}.right-\[12\.95\%\] {
+  right: 12.95%;
+}.top-\[78\.52\%\] {
+  top: 78.52%;
+}.bottom-\[21\.44\%\] {
+  bottom: 21.44%;
+}.left-\[86\.78\%\] {
+  left: 86.78%;
+}.right-\[13\.08\%\] {
+  right: 13.08%;
+}.bottom-\[21\.42\%\] {
+  bottom: 21.42%;
+}.left-\[86\.76\%\] {
+  left: 86.76%;
+}.right-\[13\.1\%\] {
+  right: 13.1%;
+}.bottom-\[21\.41\%\] {
+  bottom: 21.41%;
+}.left-\[86\.26\%\] {
+  left: 86.26%;
+}.right-\[13\.19\%\] {
+  right: 13.19%;
+}.bottom-\[21\.37\%\] {
+  bottom: 21.37%;
+}.left-\[86\.06\%\] {
+  left: 86.06%;
+}.right-\[13\.66\%\] {
+  right: 13.66%;
+}.top-\[78\.59\%\] {
+  top: 78.59%;
+}.bottom-\[21\.35\%\] {
+  bottom: 21.35%;
+}.left-\[85\.99\%\] {
+  left: 85.99%;
+}.right-\[13\.81\%\] {
+  right: 13.81%;
+}.bottom-\[21\.39\%\] {
+  bottom: 21.39%;
+}.left-\[85\.88\%\] {
+  left: 85.88%;
+}.right-\[13\.92\%\] {
+  right: 13.92%;
+}.top-\[78\.53\%\] {
+  top: 78.53%;
+}.left-\[84\.49\%\] {
+  left: 84.49%;
+}.right-\[8\.63\%\] {
+  right: 8.63%;
+}.top-\[77\.79\%\] {
+  top: 77.79%;
+}.bottom-\[21\.13\%\] {
+  bottom: 21.13%;
+}.left-\[92\.78\%\] {
+  left: 92.78%;
+}.right-\[4\.03\%\] {
+  right: 4.03%;
+}.top-\[75\.12\%\] {
+  top: 75.12%;
+}.bottom-\[23\.54\%\] {
+  bottom: 23.54%;
+}.left-\[58\.17\%\] {
+  left: 58.17%;
+}.right-\[36\.69\%\] {
+  right: 36.69%;
+}.top-\[75\.06\%\] {
+  top: 75.06%;
+}.bottom-\[22\.77\%\] {
+  bottom: 22.77%;
+}.left-\[65\.09\%\] {
+  left: 65.09%;
+}.right-\[23\.1\%\] {
+  right: 23.1%;
+}.top-\[78\.99\%\] {
+  top: 78.99%;
+}.bottom-\[17\.93\%\] {
+  bottom: 17.93%;
+}.left-\[69\.48\%\] {
+  left: 69.48%;
+}.right-\[24\.13\%\] {
+  right: 24.13%;
+}.bottom-\[21\.08\%\] {
+  bottom: 21.08%;
+}.left-\[75\.74\%\] {
+  left: 75.74%;
+}.right-\[19\.96\%\] {
+  right: 19.96%;
+}.bottom-\[19\.93\%\] {
+  bottom: 19.93%;
+}.left-\[62\.58\%\] {
+  left: 62.58%;
+}.right-\[31\.45\%\] {
+  right: 31.45%;
+}.top-\[76\.39\%\] {
+  top: 76.39%;
+}.bottom-\[22\.28\%\] {
+  bottom: 22.28%;
+}.left-\[793\.03px\] {
+  left: 793.03px;
+}.top-\[4143\.89px\] {
+  top: 4143.89px;
+}.left-\[74\.04\%\] {
+  left: 74.04%;
+}.right-\[20\.89\%\] {
+  right: 20.89%;
+}.top-\[77\%\] {
+  top: 77%;
+}.bottom-\[22\.09\%\] {
+  bottom: 22.09%;
+}.left-\[83\.4\%\] {
+  left: 83.4%;
+}.right-\[12\.01\%\] {
+  right: 12.01%;
+}.top-\[79\.25\%\] {
+  top: 79.25%;
+}.bottom-\[19\.45\%\] {
+  bottom: 19.45%;
+}.left-\[86\.46\%\] {
+  left: 86.46%;
+}.right-\[8\.68\%\] {
+  right: 8.68%;
+}.top-\[76\.97\%\] {
+  top: 76.97%;
+}.bottom-\[22\.16\%\] {
+  bottom: 22.16%;
+}.right-\[5\.57\%\] {
+  right: 5.57%;
+}.top-\[76\.47\%\] {
+  top: 76.47%;
+}.bottom-\[23\.06\%\] {
+  bottom: 23.06%;
+}.left-\[62\.87\%\] {
+  left: 62.87%;
+}.right-\[31\.23\%\] {
+  right: 31.23%;
+}.top-\[78\.72\%\] {
+  top: 78.72%;
+}.bottom-\[19\.65\%\] {
+  bottom: 19.65%;
+}.left-\[85\.86\%\] {
+  left: 85.86%;
+}.right-\[14\%\] {
+  right: 14%;
+}.left-\[85\.75\%\] {
+  left: 85.75%;
+}.right-\[14\.11\%\] {
+  right: 14.11%;
+}.top-\[78\.98\%\] {
+  top: 78.98%;
+}.bottom-\[21\.01\%\] {
+  bottom: 21.01%;
+}.left-\[85\.24\%\] {
+  left: 85.24%;
+}.right-\[14\.62\%\] {
+  right: 14.62%;
+}.top-\[79\.09\%\] {
+  top: 79.09%;
+}.bottom-\[20\.89\%\] {
+  bottom: 20.89%;
+}.left-\[84\.75\%\] {
+  left: 84.75%;
+}.right-\[15\.04\%\] {
+  right: 15.04%;
+}.top-\[79\.14\%\] {
+  top: 79.14%;
+}.bottom-\[20\.81\%\] {
+  bottom: 20.81%;
+}.left-\[79\.38\%\] {
+  left: 79.38%;
+}.right-\[13\.68\%\] {
+  right: 13.68%;
+}.top-\[78\.77\%\] {
+  top: 78.77%;
+}.bottom-\[20\.52\%\] {
+  bottom: 20.52%;
+}.left-\[59\.53\%\] {
+  left: 59.53%;
+}.right-\[35\.75\%\] {
+  right: 35.75%;
+}.top-\[77\.13\%\] {
+  top: 77.13%;
+}.bottom-\[21\.23\%\] {
+  bottom: 21.23%;
+}.left-\[73\.56\%\] {
+  left: 73.56%;
+}.right-\[21\.03\%\] {
+  right: 21.03%;
+}.top-\[75\.44\%\] {
+  top: 75.44%;
+}.left-\[78\.04\%\] {
+  left: 78.04%;
+}.right-\[18\.49\%\] {
+  right: 18.49%;
+}.top-\[77\.21\%\] {
+  top: 77.21%;
+}.bottom-\[21\.12\%\] {
+  bottom: 21.12%;
+}.left-\[91\.32\%\] {
+  left: 91.32%;
+}.right-\[7\.36\%\] {
+  right: 7.36%;
+}.top-\[75\.96\%\] {
+  top: 75.96%;
+}.bottom-\[23\.28\%\] {
+  bottom: 23.28%;
+}.left-\[90\.82\%\] {
+  left: 90.82%;
+}.right-\[8\.07\%\] {
+  right: 8.07%;
+}.top-\[77\.12\%\] {
+  top: 77.12%;
+}.left-\[85\.3\%\] {
+  left: 85.3%;
+}.right-\[11\.23\%\] {
+  right: 11.23%;
+}.top-\[77\.55\%\] {
+  top: 77.55%;
+}.bottom-\[21\.38\%\] {
+  bottom: 21.38%;
+}.left-\[60\.23\%\] {
+  left: 60.23%;
+}.right-\[31\.16\%\] {
+  right: 31.16%;
+}.top-\[75\.1\%\] {
+  top: 75.1%;
+}.bottom-\[23\.43\%\] {
+  bottom: 23.43%;
+}.left-\[76\.26\%\] {
+  left: 76.26%;
+}.right-\[19\.23\%\] {
+  right: 19.23%;
+}.top-\[80\%\] {
+  top: 80%;
+}.bottom-\[18\.87\%\] {
+  bottom: 18.87%;
+}.right-\[18\.88\%\] {
+  right: 18.88%;
+}.left-\[85\.47\%\] {
+  left: 85.47%;
+}.right-\[10\.23\%\] {
+  right: 10.23%;
+}.top-\[79\.16\%\] {
+  top: 79.16%;
+}.left-\[81\%\] {
+  left: 81%;
+}.right-\[16\.22\%\] {
+  right: 16.22%;
+}.top-\[77\.34\%\] {
+  top: 77.34%;
+}.left-\[1163px\] {
+  left: 1163px;
+}.top-\[1002px\] {
+  top: 1002px;
+}.left-\[67\.22\%\] {
+  left: 67.22%;
+}.right-\[23\.75\%\] {
+  right: 23.75%;
+}.top-\[18\.48\%\] {
+  top: 18.48%;
+}.bottom-\[80\.87\%\] {
+  bottom: 80.87%;
+}.left-\[51\.81\%\] {
+  left: 51.81%;
+}.right-\[37\.15\%\] {
+  right: 37.15%;
+}.top-\[18\.5\%\] {
+  top: 18.5%;
+}.bottom-\[80\.89\%\] {
+  bottom: 80.89%;
+}.left-\[557px\] {
+  left: 557px;
+}.top-\[992px\] {
+  top: 992px;
+}.left-1\/4 {
+  left: 25%;
+}.right-\[65\.69\%\] {
+  right: 65.69%;
+}.top-\[18\.46\%\] {
+  top: 18.46%;
+}.left-\[135px\] {
+  left: 135px;
+}.top-\[993px\] {
+  top: 993px;
+}.top-\[1879\.83px\] {
+  top: 1879.83px;
+}.right-\[998px\] {
+  right: 998px;
+}.top-\[1359\.83px\] {
+  top: 1359.83px;
+}.right-\[410px\] {
+  right: 410px;
+}.left-\[755px\] {
+  left: 755px;
+}.top-\[1712px\] {
+  top: 1712px;
+}.top-\[1147px\] {
+  top: 1147px;
+}.left-10 {
+  left: 2.5rem;
+}.top-8 {
+  top: 2rem;
+}.top-0 {
+  top: 0px;
+}.right-0 {
+  right: 0px;
+}.left-\[780px\] {
+  left: 780px;
+}.top-\[31\.25\%\] {
+  top: 31.25%;
+}.bottom-\[31\.25\%\] {
+  bottom: 31.25%;
+}.left-\[21\.33\%\] {
+  left: 21.33%;
+}.right-\[16\.17\%\] {
+  right: 16.17%;
+}.top-\[252px\] {
+  top: 252px;
+}.top-52 {
+  top: 13rem;
+}.right-40 {
+  right: 10rem;
+}.left-\[1238px\] {
+  left: 1238px;
+}.top-\[calc\(50\%_-_12px_\+_-2646\.5px\)\] {
+  top: calc(50% - 12px + -2646.5px);
+}.left-\[978px\] {
+  left: 978px;
+}.right-\[390px\] {
+  right: 390px;
+}.left-\[1074px\] {
+  left: 1074px;
+}.right-\[266px\] {
+  right: 266px;
+}.top-\[1384px\] {
+  top: 1384px;
+}.left-\[835px\] {
+  left: 835px;
+}.top-\[1937px\] {
+  top: 1937px;
+}.top-\[1204px\] {
+  top: 1204px;
+}.top-\[1769px\] {
+  top: 1769px;
+}.top-\[1244px\] {
+  top: 1244px;
+}.top-\[1809px\] {
+  top: 1809px;
+}.top-\[1180px\] {
+  top: 1180px;
+}.right-\[151px\] {
+  right: 151px;
+}.top-\[1700px\] {
+  top: 1700px;
+}.right-\[739px\] {
+  right: 739px;
+}.left-\[739px\] {
+  left: 739px;
+}.top-\[1196px\] {
+  top: 1196px;
+}.left-\[151px\] {
+  left: 151px;
+}.top-\[1716px\] {
+  top: 1716px;
+}.top-\[1336px\] {
+  top: 1336px;
+}.right-\[386px\] {
+  right: 386px;
+}.top-\[1856px\] {
+  top: 1856px;
+}.right-\[974px\] {
+  right: 974px;
+}.top-\[920px\] {
+  top: 920px;
+}.top-\[2220px\] {
+  top: 2220px;
+}.top-\[3902px\] {
+  top: 3902px;
+}.left-\[87\.45\%\] {
+  left: 87.45%;
+}.right-\[12\.54\%\] {
+  right: 12.54%;
+}.top-\[78\.33\%\] {
+  top: 78.33%;
+}.bottom-\[21\.67\%\] {
+  bottom: 21.67%;
+}.top-\[4212px\] {
+  top: 4212px;
+}.top-\[4400px\] {
+  top: 4400px;
+}.top-\[2340px\] {
+  top: 2340px;
+}.top-\[4028px\] {
+  top: 4028px;
+}.top-\[2380px\] {
+  top: 2380px;
+}.top-\[4068px\] {
+  top: 4068px;
+}.top-\[2524px\] {
+  top: 2524px;
+}.left-\[calc\(50\%_-_285px_\+_-300px\)\] {
+  left: calc(50% - 285px + -300px);
+}.top-\[2548px\] {
+  top: 2548px;
+}.left-\[calc\(50\%_-_32px_\+_-537px\)\] {
+  left: calc(50% - 32px + -537px);
+}.left-\[239px\] {
+  left: 239px;
+}.top-\[2569px\] {
+  top: 2569px;
+}.left-\[calc\(50\%_-_285px_\+_300px\)\] {
+  left: calc(50% - 285px + 300px);
+}.top-\[2652px\] {
+  top: 2652px;
+}.top-\[2780px\] {
+  top: 2780px;
+}.top-\[2676px\] {
+  top: 2676px;
+}.left-\[12\.93\%\] {
+  left: 12.93%;
+}.right-\[86\.18\%\] {
+  right: 86.18%;
+}.top-\[50\.11\%\] {
+  top: 50.11%;
+}.bottom-\[49\.53\%\] {
+  bottom: 49.53%;
+}.top-\[2686px\] {
+  top: 2686px;
+}.top-\[2804px\] {
+  top: 2804px;
+}.top-\[2803px\] {
+  top: 2803px;
+}.left-\[calc\(50\%_-_32px_\+_63px\)\] {
+  left: calc(50% - 32px + 63px);
+}.left-\[839px\] {
+  left: 839px;
+}.top-\[2675px\] {
+  top: 2675px;
+}.top-\[2825px\] {
+  top: 2825px;
+}.top-\[2558px\] {
+  top: 2558px;
+}.top-\[3146px\] {
+  top: 3146px;
+}.top-\[3186px\] {
+  top: 3186px;
+}.top-\[3410\.94px\] {
+  top: 3410.94px;
+}.left-\[13\.75\%\] {
+  left: 13.75%;
+}.right-\[84\.65\%\] {
+  right: 84.65%;
+}.top-\[3423\.93px\] {
+  top: 3423.93px;
+}.right-\[86\.13\%\] {
+  right: 86.13%;
+}.left-\[14\%\] {
+  left: 14%;
+}.right-\[85\.88\%\] {
+  right: 85.88%;
+}.left-\[14\.24\%\] {
+  left: 14.24%;
+}.right-\[85\.63\%\] {
+  right: 85.63%;
+}.left-\[14\.49\%\] {
+  left: 14.49%;
+}.right-\[85\.39\%\] {
+  right: 85.39%;
+}.left-\[14\.69\%\] {
+  left: 14.69%;
+}.right-\[85\.18\%\] {
+  right: 85.18%;
+}.left-\[14\.94\%\] {
+  left: 14.94%;
+}.right-\[84\.94\%\] {
+  right: 84.94%;
+}.top-\[3501\.94px\] {
+  top: 3501.94px;
+}.left-\[30\.62\%\] {
+  left: 30.62%;
+}.right-\[67\.77\%\] {
+  right: 67.77%;
+}.top-\[3514\.93px\] {
+  top: 3514.93px;
+}.right-\[69\.25\%\] {
+  right: 69.25%;
+}.left-\[30\.87\%\] {
+  left: 30.87%;
+}.right-\[69\.01\%\] {
+  right: 69.01%;
+}.left-\[31\.12\%\] {
+  left: 31.12%;
+}.right-\[68\.76\%\] {
+  right: 68.76%;
+}.left-\[31\.36\%\] {
+  left: 31.36%;
+}.right-\[68\.51\%\] {
+  right: 68.51%;
+}.left-\[31\.57\%\] {
+  left: 31.57%;
+}.right-\[68\.31\%\] {
+  right: 68.31%;
+}.left-\[31\.82\%\] {
+  left: 31.82%;
+}.right-\[68\.06\%\] {
+  right: 68.06%;
+}.left-\[102px\] {
+  left: 102px;
+}.top-\[3491px\] {
+  top: 3491px;
+}.left-\[107px\] {
+  left: 107px;
+}.top-\[3531px\] {
+  top: 3531px;
+}.left-\[347px\] {
+  left: 347px;
+}.top-\[3570px\] {
+  top: 3570px;
+}.left-\[582px\] {
+  left: 582px;
+}.top-\[3472px\] {
+  top: 3472px;
+}.left-\[832px\] {
+  left: 832px;
+}.top-\[3566px\] {
+  top: 3566px;
+}.left-\[1075px\] {
+  left: 1075px;
+}.top-\[3506px\] {
+  top: 3506px;
+}.left-\[352px\] {
+  left: 352px;
+}.top-\[3610px\] {
+  top: 3610px;
+}.left-\[837px\] {
+  left: 837px;
+}.top-\[3606px\] {
+  top: 3606px;
+}.left-\[587px\] {
+  left: 587px;
+}.top-\[3512px\] {
+  top: 3512px;
+}.left-\[1080px\] {
+  left: 1080px;
+}.top-\[3546px\] {
+  top: 3546px;
+}.left-\[174px\] {
+  left: 174px;
+}.top-\[3363px\] {
+  top: 3363px;
+}.left-\[655px\] {
+  left: 655px;
+}.left-\[977px\] {
+  left: 977px;
+}.top-\[3454px\] {
+  top: 3454px;
+}.left-\[450px\] {
+  left: 450px;
+}.top-\[3441px\] {
+  top: 3441px;
+}.left-\[1201px\] {
+  left: 1201px;
+}.top-\[3382px\] {
+  top: 3382px;
+}.left-\[1137\.4px\] {
+  left: 1137.4px;
+}.top-\[4726px\] {
+  top: 4726px;
+}.left-\[235px\] {
+  left: 235px;
+}.top-\[4964px\] {
+  top: 4964px;
+}.top-\[4920px\] {
+  top: 4920px;
+}.top-\[428px\] {
+  top: 428px;
+}.top-\[596px\] {
+  top: 596px;
+}.top-\[4248px\] {
+  top: 4248px;
+}.left-4 {
+  left: 1rem;
+}.top-2 {
+  top: 0.5rem;
+}.right-8 {
+  right: 2rem;
+}.top-3 {
+  top: 0.75rem;
+}.right-4 {
+  right: 1rem;
+}.bottom-0 {
+  bottom: 0px;
+}.right-10 {
+  right: 2.5rem;
+}.bottom-6 {
+  bottom: 1.5rem;
+}.right-\[325px\] {
+  right: 325px;
+}.top-6 {
+  top: 1.5rem;
+}.top-\[4320px\] {
+  top: 4320px;
+}.right-\[935px\] {
+  right: 935px;
+}.top-\[516px\] {
+  top: 516px;
+}.right-\[1133px\] {
+  right: 1133px;
+}.top-\[5084px\] {
+  top: 5084px;
+}.right-\[1033px\] {
+  right: 1033px;
+}.top-\[calc\(50\%_-_12px_\+_0px\)\] {
+  top: calc(50% - 12px + 0px);
+}.m-0 {
+  margin: 0px;
+}.inline-block {
+  display: inline-block;
+}.inline {
+  display: inline;
+}.flex {
+  display: flex;
+}.h-\[564px\] {
+  height: 564px;
+}.h-\[129px\] {
+  height: 129px;
+}.h-\[135px\] {
+  height: 135px;
+}.h-\[109px\] {
+  height: 109px;
+}.h-\[123px\] {
+  height: 123px;
+}.h-0\.5 {
+  height: 0.125rem;
+}.h-\[9px\] {
+  height: 9px;
+}.h-2\.5 {
+  height: 0.625rem;
+}.h-2 {
+  height: 0.5rem;
+}.h-5 {
+  height: 1.25rem;
+}.h-\[77px\] {
+  height: 77px;
+}.h-1 {
+  height: 0.25rem;
+}.h-\[5px\] {
+  height: 5px;
+}.h-\[7px\] {
+  height: 7px;
+}.h-\[92px\] {
+  height: 92px;
+}.h-\[193px\] {
+  height: 193px;
+}.h-\[220px\] {
+  height: 220px;
+}.h-\[840px\] {
+  height: 840px;
+}.h-\[122px\] {
+  height: 122px;
+}.h-\[42px\] {
+  height: 42px;
+}.h-\[41px\] {
+  height: 41px;
+}.h-\[18px\] {
+  height: 18px;
+}.h-8 {
+  height: 2rem;
+}.h-\[5389px\] {
+  height: 5389px;
+}.h-\[800px\] {
+  height: 800px;
+}.h-6 {
+  height: 1.5rem;
+}.h-10 {
+  height: 2.5rem;
+}.h-\[344px\] {
+  height: 344px;
+}.h-16 {
+  height: 4rem;
+}.h-\[766px\] {
+  height: 766px;
+}.h-\[712px\] {
+  height: 712px;
+}.h-28 {
+  height: 7rem;
+}.h-\[1\.77px\] {
+  height: 1.77px;
+}.h-\[469\.02px\] {
+  height: 469.02px;
+}.h-4 {
+  height: 1rem;
+}.h-12 {
+  height: 3rem;
+}.h-0 {
+  height: 0px;
+}.w-\[564px\] {
+  width: 564px;
+}.w-\[137px\] {
+  width: 137px;
+}.w-\[121px\] {
+  width: 121px;
+}.w-\[115px\] {
+  width: 115px;
+}.w-\[143px\] {
+  width: 143px;
+}.w-3 {
+  width: 0.75rem;
+}.w-\[22px\] {
+  width: 22px;
+}.w-\[55px\] {
+  width: 55px;
+}.w-\[15px\] {
+  width: 15px;
+}.w-2 {
+  width: 0.5rem;
+}.w-5 {
+  width: 1.25rem;
+}.w-\[76px\] {
+  width: 76px;
+}.w-\[1440px\] {
+  width: 1440px;
+}.w-\[220px\] {
+  width: 220px;
+}.w-\[605px\] {
+  width: 605px;
+}.w-\[79px\] {
+  width: 79px;
+}.w-\[142px\] {
+  width: 142px;
+}.w-\[126px\] {
+  width: 126px;
+}.w-\[162px\] {
+  width: 162px;
+}.w-3\.5 {
+  width: 0.875rem;
+}.w-\[174px\] {
+  width: 174px;
+}.w-\[660px\] {
+  width: 660px;
+}.w-\[570px\] {
+  width: 570px;
+}.w-\[42px\] {
+  width: 42px;
+}.w-\[72px\] {
+  width: 72px;
+}.w-\[100px\] {
+  width: 100px;
+}.w-\[470px\] {
+  width: 470px;
+}.w-\[367px\] {
+  width: 367px;
+}.w-\[566px\] {
+  width: 566px;
+}.w-16 {
+  width: 4rem;
+}.w-\[370px\] {
+  width: 370px;
+}.w-\[414px\] {
+  width: 414px;
+}.w-\[393px\] {
+  width: 393px;
+}.w-\[450px\] {
+  width: 450px;
+}.w-\[238px\] {
+  width: 238px;
+}.w-\[228px\] {
+  width: 228px;
+}.w-8 {
+  width: 2rem;
+}.w-\[221\.04px\] {
+  width: 221.04px;
+}.w-\[487px\] {
+  width: 487px;
+}.w-\[322px\] {
+  width: 322px;
+}.w-4 {
+  width: 1rem;
+}.w-\[261px\] {
+  width: 261px;
+}.w-\[215px\] {
+  width: 215px;
+}.w-\[402px\] {
+  width: 402px;
+}.w-24 {
+  width: 6rem;
+}.w-\[170px\] {
+  width: 170px;
+}.w-\[154px\] {
+  width: 154px;
+}.w-20 {
+  width: 5rem;
+}.w-\[354px\] {
+  width: 354px;
+}.origin-top-left {
+  transform-origin: top left;
+}.overflow-clip {
+  overflow: clip;
+}.rounded-md {
+  border-radius: 0.375rem;
+}.rounded-\[10px\] {
+  border-radius: 10px;
+}.rounded-\[70px\] {
+  border-radius: 70px;
+}.rounded-lg {
+  border-radius: 0.5rem;
+}.rounded-sm {
+  border-radius: 0.125rem;
+}.rounded-xl {
+  border-radius: 0.75rem;
+}.rounded-full {
+  border-radius: 9999px;
+}.rounded {
+  border-radius: 0.25rem;
+}.border {
+  border-width: 1px;
+}.border-2 {
+  border-width: 2px;
+}.border-solid {
+  border-style: solid;
+}.border-\[rgba\(245\2c 248\2c 250\2c 1\)\] {
+  border-color: rgba(245,248,250,1);
+}.border-\[rgba\(71\2c 190\2c 125\2c 1\)\] {
+  border-color: rgba(71,190,125,1);
+}.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}.bg-\[rgba\(245\2c 248\2c 250\2c 1\)\] {
+  background-color: rgba(245,248,250,1);
+}.bg-\[rgba\(228\2c 230\2c 239\2c 1\)\] {
+  background-color: rgba(228,230,239,1);
+}.bg-\[rgba\(48\2c 144\2c 247\2c 1\)\] {
+  background-color: rgba(48,144,247,1);
+}.bg-\[rgba\(8\2c 37\2c 68\2c 1\)\] {
+  background-color: rgba(8,37,68,1);
+}.bg-\[rgba\(185\2c 207\2c 231\2c 1\)\] {
+  background-color: rgba(185,207,231,1);
+}.bg-\[rgba\(15\2c 50\2c 87\2c 1\)\] {
+  background-color: rgba(15,50,87,1);
+}.bg-\[rgba\(18\2c 57\2c 98\2c 1\)\] {
+  background-color: rgba(18,57,98,1);
+}.bg-\[rgba\(152\2c 159\2c 176\2c 1\)\] {
+  background-color: rgba(152,159,176,1);
+}.bg-\[rgba\(170\2c 178\2c 197\2c 1\)\] {
+  background-color: rgba(170,178,197,1);
+}.bg-\[rgba\(0\2c 158\2c 247\2c 1\)\] {
+  background-color: rgba(0,158,247,1);
+}.text-left {
+  text-align: left;
+}.text-center {
+  text-align: center;
+}.font-\[\'Poppins\'\] {
+  font-family: 'Poppins';
+}.text-\[60px\] {
+  font-size: 60px;
+}.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}.text-\[32px\] {
+  font-size: 32px;
+}.text-\[56px\] {
+  font-size: 56px;
+}.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}.font-bold {
+  font-weight: 700;
+}.font-semibold {
+  font-weight: 600;
+}.font-medium {
+  font-weight: 500;
+}.font-normal {
+  font-weight: 400;
+}.capitalize {
+  text-transform: capitalize;
+}.leading-\[80px\] {
+  line-height: 80px;
+}.leading-\[normal\] {
+  line-height: normal;
+}.leading-6 {
+  line-height: 1.5rem;
+}.leading-\[64px\] {
+  line-height: 64px;
+}.leading-5 {
+  line-height: 1.25rem;
+}.leading-none {
+  line-height: 1;
+}.leading-\[22px\] {
+  line-height: 22px;
+}.tracking-\[11px\] {
+  letter-spacing: 11px;
+}.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}.text-\[rgba\(0\2c 158\2c 247\2c 1\)\] {
+  color: rgba(0,158,247,1);
+}.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}.text-\[rgba\(126\2c 130\2c 152\2c 1\)\] {
+  color: rgba(126,130,152,1);
+}.text-\[rgba\(248\2c 82\2c 85\2c 1\)\] {
+  color: rgba(248,82,85,1);
+}.text-\[rgba\(8\2c 37\2c 68\2c 1\)\] {
+  color: rgba(8,37,68,1);
+}.text-\[rgba\(97\2c 101\2c 119\2c 1\)\] {
+  color: rgba(97,101,119,1);
+}.text-\[rgba\(124\2c 154\2c 187\2c 1\)\] {
+  color: rgba(124,154,187,1);
+}.text-\[rgba\(245\2c 248\2c 250\2c 1\)\] {
+  color: rgba(245,248,250,1);
+}.underline {
+  text-decoration-line: underline;
+}.opacity-20 {
+  opacity: 0.2;
+}.opacity-50 {
+  opacity: 0.5;
+}.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}.\[background\:url\(https\:\/\/uortjlczjmucmpaqqhqm\.supabase\.co\/storage\/v1\/object\/public\/firejet-converted-images\/images\/9595c8a2f857d7a40bdea09da17746784386072f\.webp\)_center_\/_cover\] {
+  background: url(https://uortjlczjmucmpaqqhqm.supabase.co/storage/v1/object/public/firejet-converted-images/images/9595c8a2f857d7a40bdea09da17746784386072f.webp) center / cover;
+}.\[background\:url\(https\:\/\/uortjlczjmucmpaqqhqm\.supabase\.co\/storage\/v1\/object\/public\/firejet-converted-images\/images\/ce55de6c45b2050dd9f97f81fee5cd025a5ba1d1\.webp\)_center_\/_cover\] {
+  background: url(https://uortjlczjmucmpaqqhqm.supabase.co/storage/v1/object/public/firejet-converted-images/images/ce55de6c45b2050dd9f97f81fee5cd025a5ba1d1.webp) center / cover;
+}.\[rotate\:27\.06deg\] {
+  rotate: 27.06deg;
+}.\[background\:url\(https\:\/\/uortjlczjmucmpaqqhqm\.supabase\.co\/storage\/v1\/object\/public\/firejet-converted-images\/images\/158758ef7821f8c14c326ebfcd2ecec36c02b156\.webp\)_center_\/_cover\] {
+  background: url(https://uortjlczjmucmpaqqhqm.supabase.co/storage/v1/object/public/firejet-converted-images/images/158758ef7821f8c14c326ebfcd2ecec36c02b156.webp) center / cover;
+}.\[box-shadow\:0px_0px_0px_1px_rgba\(228\2c _230\2c _239\2c _1\)_inset\] {
+  box-shadow: 0px 0px 0px 1px rgba(228, 230, 239, 1) inset;
+}.\[box-shadow-width\:1px\] {
+  box-shadow-width: 1px;
+}html{line-height:unset;font-family:unset;}
